@@ -13,6 +13,9 @@
 body {
   padding: 0.5rem 6vw;
   /* min-width: 300px; */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 header {
   height: 5rem;
@@ -26,7 +29,8 @@ header {
 header img {
   height: 50%;
 }
-header h1 {
+header h1,
+footer h1 {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 100%;
@@ -44,6 +48,22 @@ article h2 {
   text-wrap: wrap;
   line-height: 1.2;
 }
+
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 0;
+  gap: 1rem;
+}
+footer ul {
+  list-style: none;
+  grid-column: span 2;
+}
+footer ul li a {
+  color: black;
+}
+
 .basket {
   height: 100%;
   display: flex;
@@ -157,6 +177,142 @@ article h2 {
 .item-img-wrapper:hover > button {
   display: block;
 }
+
+.social-img-wrapper {
+  display: flex;
+  padding-right: 3rem;
+  justify-content: flex-end;
+  height: 1.5rem;
+  gap: 1rem;
+}
+.social-img-wrapper img {
+  height: 100%;
+}
+.shop-wrapper {
+  width: 100%;
+  background-color: var(--sales-bg-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 6vh;
+  gap: 1rem;
+}
+.shop-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.shop-wrapper p {
+  background-color: var(--sales-bg-color);
+  font-size: 1.5rem;
+}
+.shop-btn-wrapper {
+  background-color: var(--sales-bg-color);
+  display: flex;
+  justify-content: center;
+}
+.shop-btn {
+  background-color: var(--sales-bg-color);
+  font-size: 1.2rem;
+  /* position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%; */
+  bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+}
+.shop-btn:hover {
+  background-color: black;
+  color: white;
+}
+.friends-wrapper {
+  width: 100vw;
+  padding: 5rem 0;
+  /* height: 30rem; */
+  background-image: url(./Anim-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.friends-wrapper:hover {
+  background-position: 40% 40%;
+}
+.friends-wrapper h1 {
+  background-color: transparent;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.friends-wrapper p {
+  background-color: transparent;
+  padding: 0 10rem;
+}
+.friends-wrapper img {
+  background-color: transparent;
+  height: 5rem;
+  object-fit: contain;
+}
+.follow-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 5rem;
+  gap: 1rem;
+}
+.follow-us h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.follow-us h1 a {
+  color: black;
+}
+.bottom-img-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bottom-img-grid img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.subscibe-div {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subscibe-div p {
+  grid-column: span 2;
+}
+.sign-div {
+  /* display: flex; */
+  gap: 0.5rem;
+}
+.sign-div input {
+  min-width: 55%;
+  background-color: white;
+  padding: 1.3rem 2rem;
+  border: none;
+  font-weight: 100;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+.Sign-btn {
+  padding: 1.3rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
 @media only screen and (min-width: 768px) {
   body {
     padding: 1rem 3vw;
@@ -180,5 +336,14 @@ article h2 {
   }
   article h2 {
     font-size: 2.5rem;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
