@@ -199,11 +199,24 @@ footer ul li a {
   padding: 5rem 6vh;
   gap: 1rem;
 }
-.shop-wrapper img {
+.shop-item {
+  width: 100%;
+  background-color: var(--sales-bg-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.shop-item:nth-child(2) {
+  display: none;
+}
+.shop-item img {
   width: 100%;
   object-fit: cover;
 }
-.shop-wrapper p {
+.shop-item p {
   background-color: var(--sales-bg-color);
   font-size: 1.5rem;
 }
@@ -215,9 +228,6 @@ footer ul li a {
 .shop-btn {
   background-color: var(--sales-bg-color);
   font-size: 1.2rem;
-  /* position: absolute;
-  transform: translate(-50%, 0);
-  left: 50%; */
   bottom: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
@@ -229,7 +239,6 @@ footer ul li a {
 .friends-wrapper {
   width: 100vw;
   padding: 5rem 0;
-  /* height: 30rem; */
   background-image: url(./Anim-bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -247,6 +256,7 @@ footer ul li a {
   background-color: transparent;
   font-size: 3rem;
   font-weight: 500;
+  padding: 0 0.5rem;
 }
 .friends-wrapper p {
   background-color: transparent;
@@ -333,9 +343,84 @@ footer ul li a {
   }
   .collar img {
     aspect-ratio: 707 / 387;
+    height: 28rem;
   }
   article h2 {
     font-size: 2.5rem;
+  }
+  .about-us {
+    padding-left: 3rem;
+  }
+  .favorite-item {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 11rem;
+  }
+  .favorite-item > img {
+    width: 80%;
+    height: 30rem;
+  }
+  .favorite-item-item {
+    width: 50%;
+  }
+  .favorite-item-wrapper {
+    width: 100%;
+  }
+  .shop-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .shop-item:nth-child(2) {
+    display: flex;
+  }
+  .friends-wrapper h1 {
+    font-size: 2.8rem;
+  }
+  .friends-wrapper img {
+    height: 8rem;
+  }
+  .friends-wrapper p {
+    font-size: 1.2rem;
+  }
+  .follow-us {
+    padding: 3rem 3rem;
+  }
+  .follow-us h1 {
+    font-size: 2.6rem;
+  }
+  .follow-us p {
+    font-size: 1.2rem;
+  }
+  .bottom-img-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .bottom-img-grid img {
+    height: 13rem;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer h1 {
+    grid-column: span 2;
+  }
+  footer ul {
+    grid-row: span 2;
+    width: 100%;
+    grid-column: span 1;
+    order: 4;
+  }
+  .social-img-wrapper {
+    width: 100%;
+    grid-row: span 2;
+    justify-content: flex-start;
+    order: 3;
+  }
+  .subscibe-div {
+    grid-row: span 3;
+    width: 100%;
+    grid-column: span 1;
+    order: 2;
   }
 }
 
