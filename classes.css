@@ -35,6 +35,15 @@ footer h1 {
   font-weight: 500;
   line-height: 100%;
 }
+header ul {
+  list-style: none;
+  display: none;
+  gap: 1rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
 
 article {
   display: grid;
@@ -65,13 +74,14 @@ footer ul li a {
 }
 
 .basket {
-  height: 100%;
+  height: 40%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.5rem;
 }
 .basket img {
-  height: 30%;
+  height: 100%;
 }
 .basket p {
   font-size: 1.1rem;
@@ -197,7 +207,7 @@ footer ul li a {
   align-items: center;
   text-align: center;
   padding: 5rem 6vh;
-  gap: 1rem;
+  gap: 2rem;
 }
 .shop-item {
   width: 100%;
@@ -210,6 +220,9 @@ footer ul li a {
   gap: 1rem;
 }
 .shop-item:nth-child(2) {
+  display: none;
+}
+.shop-item:nth-child(3) {
   display: none;
 }
 .shop-item img {
@@ -342,7 +355,7 @@ footer ul li a {
     font-weight: 500;
   }
   .collar img {
-    aspect-ratio: 707 / 387;
+    /* aspect-ratio: 707 / 387; */
     height: 28rem;
   }
   article h2 {
@@ -360,6 +373,7 @@ footer ul li a {
   .favorite-item > img {
     width: 80%;
     height: 30rem;
+    object-fit: contain;
   }
   .favorite-item-item {
     width: 50%;
@@ -421,6 +435,48 @@ footer ul li a {
     width: 100%;
     grid-column: span 1;
     order: 2;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    padding: 0 3vw;
+  }
+  header > img {
+    display: none;
+  }
+  header h1 {
+    width: 33%;
+  }
+  header ul {
+    display: flex;
+    width: 33%;
+  }
+  header {
+    height: 3rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .basket {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .shop-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .shop-item:nth-child(3) {
+    display: flex;
+  }
+  .collar img {
+    /* aspect-ratio: 707 / 387; */
+    height: auto;
+  }
+  .favorite-item > img {
+    height: 100%;
   }
 }
 
