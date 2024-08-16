@@ -109,7 +109,7 @@ footer ul li a {
   font-size: 3.6rem;
   font-weight: 500;
   line-height: 1.2;
-  padding-bottom: 5rem;
+  padding-bottom: 4.8rem;
   text-wrap: balance;
 }
 .collar img {
@@ -450,6 +450,7 @@ footer ul li a {
   header h1 {
     width: 33%;
   }
+
   header ul {
     display: flex;
     width: 33%;
@@ -467,6 +468,13 @@ footer ul li a {
 }
 
 @media only screen and (min-width: 992px) {
+  body {
+    padding: 0.5rem 3vw;
+  }
+  header {
+    padding-bottom: 1.3rem;
+  }
+
   .shop-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -479,6 +487,16 @@ footer ul li a {
   }
   .favorite-item > img {
     height: 100%;
+  }
+  .collar h1 {
+    font-size: 4.8rem;
+    text-wrap: pretty;
+  }
+  article h2 {
+    font-size: 3rem;
+  }
+  article p {
+    font-size: 1.5rem;
   }
 }
 
