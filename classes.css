@@ -364,7 +364,7 @@ footer ul li a {
     font-size: 2.5rem;
   }
   .about-us {
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
   .favorite-item {
     grid-template-columns: 1fr 1fr;
@@ -497,6 +497,12 @@ footer ul li a {
   }
   article p {
     font-size: 1.5rem;
+  }
+  .about-us {
+    padding-left: 8rem;
+  }
+  .friends-wrapper:hover {
+    background-position: 20% 20%;
   }
 }
 
